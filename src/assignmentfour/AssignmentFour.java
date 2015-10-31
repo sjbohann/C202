@@ -33,6 +33,15 @@ public class AssignmentFour {
     public long compsFound = 0;
     public long compsNotFound = 0;
     
+    /**
+     * This method reads a dictionary file and loads each word into
+     * a linked list in an array using an index based on the first letter of the
+     * word
+     * @param listArray array of linkedlists to be loaded
+     * requires: random_dictionary exits and is in the proper location
+     * ensures: that the listArray is properly loaded with words from the 
+     * random dictionary
+     */
     public void readDictionary(MyLinkedList[] listArray) {
         File f = new File("random_dictionary.txt");
         try {
@@ -47,6 +56,14 @@ public class AssignmentFour {
         }
     }
     
+    /**
+     * This method reads a text file, gets one word at a time, and then searches
+     * an array of LinkedLists for that word to determine if the word is in the
+     * dictionary.
+     * @param listArray: array used to search for keys read from this method
+     * requires: oliver.txt exists
+     * ensures: that the LinkedList array is searched for words from oliver.txt
+     */
     public void readBook(MyLinkedList[] listArray) {
         try {
             int[] i = new int[1];
@@ -76,6 +93,9 @@ public class AssignmentFour {
         }
     }
     
+    /**
+     * This method prints the results of the searches
+     */
     public void printResults() {
         System.out.println("Number of words found: " + wordsFound);
         System.out.println("Number of words not found: " + wordsNotFound);
